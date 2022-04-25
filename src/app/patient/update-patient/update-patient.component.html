@@ -1,0 +1,31 @@
+<div class="container col-5">
+    <h3 class="text-align-center "> Modifier un patient </h3>
+<form  >
+    <div class=" form-group ">
+      <label for="nom" >Nom :</label>
+      <input type="text" class="form-control" id="nom" name="nom "[(ngModel)]="patient.nom" >
+    </div>
+    <div class=" form-group ">
+        <label for="prenom" class="form-label">prenom:</label>
+        <input type="text" class="form-control" id="prenom" name="prenom " [(ngModel)]="patient.prenom">
+    </div>
+    <div class="form-group">
+        <label for="dateNaissance" class="form-label">date naissance</label>
+        <input  type="date" class="form-control" id="dateNaissance" name="dateNaissance" [(ngModel)]="patient.dateNaissance" >
+    </div>
+    <div class="form-group">
+        <label for="adresse" class="form-label">adresse : </label>
+        <input type="text" class="form-control" id="adresse" name="adresse " [(ngModel)]="patient.adresse" >
+    </div>
+    <div class="form-group ">
+        <label for="phone" class="form-label">telephone: </label>
+        <input type="phone" class="form-control" id="phone" name="telephone" [(ngModel)]="patient.telephone" >
+    </div>
+    <div class="form-group">
+        <label for="socialAccount" class="form-label">Social compte : </label>
+        <input type="text" class="form-control" id="socialAccount" name="socialAccount" [(ngModel)]="patient.socialAccount" >
+    </div>
+    <br>
+        <button type="submit"(click)="UpdatePatient()" class="btn btn-primary">Submit</button>
+  </form>
+</div>

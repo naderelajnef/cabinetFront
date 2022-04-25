@@ -1,0 +1,41 @@
+
+<div class="container" id="main-container">
+  <br>
+  <h3 style="text-align:center">liste des patients</h3>
+  <br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">date de naissance</th>
+        <th scope="col">adresse</th>
+        <th scope="col">telephone</th>
+        <th scope="col">social compte</th>
+        <!-- <th scope="col">dossier Médical</th>-->
+       
+        <th scope="col">Update</th>
+        <th  scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let patient of patients">
+        <th scope="row">{{patient.id}}</th>
+        <td>{{patient.nom}}</td>
+        <td>{{patient.prenom}}</td>
+        <td>{{patient.dateNaissance}}</td>
+        <td>{{patient.adresse}}</td>
+        <td>{{patient.telephone}}</td>
+        <td>{{patient.socialAccount}}</td>
+        <!--<td>{{patient.dossierM}}</td>--->
+        
+        <td ><button class="btn btn-success" (click)="UpdatePatientRecord(patient.id)">Update</button>
+        <td><button class="btn btn-danger" (click)="deletePatientRecord(patient.id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+    
+</div>
+
+<!--<button (click)="deletePatient(patient.id)" type="button ">supprimer</button>-->>

@@ -1,0 +1,30 @@
+
+<div class="container" id="main-container">
+    <br>
+    <h3 style="text-align:center">liste des maladies par dossier</h3>
+    <br>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nom</th>
+          <th scope="col">traitement</th>
+          <th scope="col">diagnostic</th>
+          <th scope="col">evolution</th>
+          <th scope="col">#</th>
+          
+        </tr>
+      </thead>
+      <tbody >
+        <tr *ngFor="let maladie of maladies">
+          <th scope="row">{{maladie.id_maladie}}</th>
+          <td>{{maladie.nom}}</td>
+          <td>{{maladie.traitement}}</td>
+          <td>{{maladie.diagnostic}}</td>
+          <td>{{maladie.evolution}}</td>
+          <td>{{maladie.dossier}}</td>
+         
+          
+        </tr>
+      </tbody>
+    </table>   

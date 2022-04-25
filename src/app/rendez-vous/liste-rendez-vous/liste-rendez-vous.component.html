@@ -1,0 +1,27 @@
+
+
+<section class="container">
+<h3 style="text-align:center">liste des rendez vous</h3>
+    <br>
+    <table style="text-align: center;" class="table table-bordered border-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">date </th>
+          <th scope="col">heure</th>
+          <th scope="col">supprimer</th>
+          <th scope="col">Modifier</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr *ngFor=" let  rdv of  rdvs" >
+          <th scope="row">{{rdv.id_rdv}}</th>
+          <td>{{rdv.date}}</td>
+          <td>{{rdv.heure}}</td>
+          
+          <td><button type="submit "  (click)=" deleteRdv(rdv.id_rdv)" class="btn btn-danger">supprimer</button></td>
+          <td><button type="submit "  (click)="  UpdateRdvRecord(rdv.id_rdv)" class="btn btn-success">Modifier</button></td>
+        </tr>
+      </tbody>
+    </table>      
+</section>

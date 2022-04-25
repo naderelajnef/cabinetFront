@@ -1,0 +1,72 @@
+
+<div class="container col-6" >
+
+
+<div class="row ">
+        <div class="div col-6">
+            <!---<h2>Choisir un medeicn </h2>---->
+            
+            <!--<app-list-medecins></app-list-medecins>---->
+        
+        </div>
+        <div class="">
+            <div class="row"> <h2 class="py-2"></h2></div>
+            <form >
+
+                <label for="date" class="col-1 col-form-label">Date</label>
+                <div class="col-6">
+                    <div class="input-group date" id="Datepicker">
+                    <input type="date" class="form-control" id="date" name="date"  name="date"[(ngModel)]="rendezvous.date">
+                    <span class="input-group-append">
+                    </span>
+                    </div>
+                </div>
+                    <div class="col-6">
+                    <label for="appt">Choisissez votre heure de votre rendez_vous</label>
+                    <input type="time" id="appt" name="appt"
+                        min="09:00" max="18:00" required [(ngModel)]="rendezvous.heure">
+                    </div>
+                
+             </form><br>
+             <button style="padding-bottom: 10px;"type="submit "  (click)=" addRdv()" class="btn btn-primary">Prise un  rendez_vous</button><br><br>
+             
+                <button  style="padding-bottom: 10px;" type="button" class="btn btn-secondary"   data-bs-toggle="modal" data-bs-target="#updateModal">
+                    Modifier
+                  </button>
+                <!-- Modal -->
+                <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="updateModalLabel">Modification</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="input-group date" id="Datepicker">
+                                <input type="date" class="form-control" id="date" name="date"  name="date"[(ngModel)]="rendezvous.date">
+                                <span class="input-group-append">
+                                </span>
+                            </div>
+                                <div>
+                                    <label for="appt">Choisissez votre heure de votre rendez_vous</label>
+                                    <input type="time" id="appt" name="appt"
+                                    min="09:00" max="18:00" required [(ngModel)]="rendezvous.heure">
+                                </div>
+                                
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-success"(click)=" UpdateRdv()" >Save changes</button>
+                        </div>
+        
+                     </div>
+                     
+                 </div>
+                 </div>
+    </div>
+
+ </div>
+    
+
+</div>
+  

@@ -1,0 +1,41 @@
+
+<div class="container" id="main-container">
+    <br>
+    <h3 style="text-align:center">liste</h3>
+    <br>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Prenom</th>
+          <th scope="col">specialite</th>
+          
+        </tr>
+      </thead>
+      <tbody >
+        <tr *ngFor=" let  medecin of  medecins">
+          <th scope="row">{{medecin.id_medecin}}</th>
+          <td>{{medecin.nom}}</td>
+          <td>{{medecin.prenom}}</td>
+          <td>{{medecin.specialite}}</td>
+         
+          
+        </tr>
+      </tbody>
+    </table>   
+    <div class="input-group mb-3">
+      <button class="btn btn-outline-secondary" type="submit">Button</button>
+      <select  *ngFor=" let  medecin of  medecins"  class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon">
+        <option selected>{{medecin.specialite}}...</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <app-liste-maladie></app-liste-maladie>
+    
+  </div>
+ 
+  
+   
